@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div id="container">
+    <ul>
+        <li>test 1</li>
+        <li>test 2</li>
+        <li>test 3</li>
+    </ul>
+</div>
+<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad deleniti dolorem, dolores
+    excepturi harum in incidunt iusto minima nihil officia optio possimus quas saepe tempora veniam voluptas voluptate
+    voluptates?</p>
+</body>
+
+<script>
+
+    var target = document.getElementById('container'),
+            el = document.querySelector('.text');
+
+    function prepend(container, newElement) {
+        container.insertBefore(newElement, container.firstElementChild);
+    }
+
+    prepend(target, el);
+
+</script>
+
+</html>
