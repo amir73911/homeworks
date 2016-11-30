@@ -3,9 +3,9 @@
 let array = [1, 2, 3, 4, 5, 6];
 
 // Аналог forEach
-function forEach(ar, fn) {
+function forEach(ar, fn, thisArg = undefined) {
     for (let item of ar) {
-        fn(item);
+        fn(item, thisArg);
     }
 }
 
@@ -122,7 +122,7 @@ function concat(...ars) {
 
 
 // Результаты
-//forEach(array, item => console.log(item));
+forEach(array, item => console.log(item));
 let greaterThan4 = filter(array, item => item > 4);
 let sqare = map(array, item => item * item);
 let slicedAr = slice(array, 2, -2);
