@@ -23,7 +23,9 @@
             el = document.querySelector('.text');
 
     function prepend(container, newElement) {
-        container.insertBefore(newElement, container.firstElementChild);
+        if (container.firstElementChild) {
+            container.insertBefore(newElement, container.firstElementChild);
+        }
     }
 
     prepend(target, el);
